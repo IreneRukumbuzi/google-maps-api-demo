@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# React Google Maps React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React application that utilizes the Google Maps JavaScript API to display directions from \
+a starting point to a destination, with multiple waypoints along the route.
 
-## Available Scripts
 
-In the project directory, you can run:
+### features
 
-### `npm start`
+[x] Displays a Google Map with directions from a starting point to a destination.
+[x] Supports multiple waypoints along the route.
+[x] Automatically fetches and displays the next stop address during navigation.
+[x] Provides information about the distance and estimated time for the journey.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Before running the application, you need to obtain a Google Maps API key. \
+You can get it by following the instructions provided by Google.
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the [repository](https://github.com/IreneRukumbuzi/google-maps-api-demo.git) to your local machine 
+2. Navigate to the project directory
+3. Install the dependencies `npm install`
+4. Create a `.env` file in the project and the Google Maps API key as `REACT_APP_API_KEY=KEY`
 
-### `npm run build`
+### Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Run this command `npm start` \
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This will run the application in development mode and open it in your default web browser \
+on [localhost](http://localhost:3000/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Logic
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### App.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[x] The App component is the main component of the application.
+[x] It initializes the state variables to store the directions response, starting point name, ending point name, next stop index, and next stop name.
+[x] The useEffect hook is used to update the starting point name and ending point name when the directions response is available.
+[x] Another useEffect hook is used to fetch and display the next stop name when the directions response or next stop index changes.
+[x] The fetchNextStopName function fetches the address of the next stop using the Google Geocoding API.
+[x] The distance covered along the route is calculated and updated every 10 seconds using a separate useEffect hook.
+[x] The Google Map is displayed using the GoogleMap component from the @react-google-maps/api package.
+[x] Options are provided to customize the map, including disabling certain controls and enabling the compass control.
+[x] The DirectionsService component is used to fetch the directions from the Google Maps Directions API.
+[x] The directions response is stored in the state and displayed using the DirectionsRenderer component.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### CurrentLocation.js
 
-## Learn More
+[x] This component is responsible for displaying the current location marker on the map.
+[x] It receives the current location as props and renders a marker at that location on the map.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### App.css
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[x] This file contains the styles for the application components.
