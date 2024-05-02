@@ -8,9 +8,24 @@ body {
   overflow-x: hidden;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Set container height to full viewport height */
+}
+
+.header {
+  flex: 0 0 auto;
+}
+
+.map-container {
+  flex: 1;
+}
+
 .gradient-container {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .bold {
@@ -22,7 +37,7 @@ body {
 }
 
 .top-section {
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(22,121,9,1) 0%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(22, 121, 9, 1) 0%, rgba(0, 212, 255, 1) 100%);
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -54,4 +69,23 @@ body {
 
 .google-map {
   flex: 1;
+}
+
+.footer {
+  flex: 0 0 auto;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(22, 121, 9, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.icon {
+  color: white;
+  font-size: 18px;
 }
