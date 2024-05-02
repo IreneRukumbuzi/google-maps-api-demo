@@ -11,7 +11,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Set container height to full viewport height */
+  height: 100vh;
 }
 
 .header {
@@ -37,7 +37,7 @@ body {
 }
 
 .top-section {
-  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(22, 121, 9, 1) 0%, rgba(0, 212, 255, 1) 100%);
+  background: linear-gradient(90deg, rgba(42,166,148,1) 9%, rgba(22,237,61,0.8408613445378151) 100%);
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -73,12 +73,7 @@ body {
 
 .footer {
   flex: 0 0 auto;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(22, 121, 9, 1) 0%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: linear-gradient(90deg, rgba(42,166,148,1) 9%, rgba(22,237,61,0.8408613445378151) 100%);
   display: flex;
   justify-content: space-around;
   align-items: center;
