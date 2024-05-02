@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: system-ui;
 }
 
 body {
@@ -10,7 +11,14 @@ body {
 .gradient-container {
   display: flex;
   flex-direction: column;
-  height: 140px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.not-bold {
+  font-weight: lighter;
 }
 
 .top-section {
@@ -27,6 +35,8 @@ body {
 
 .startup-text {
   color: black;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .bottom-section {
@@ -34,7 +44,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .bottom-text {

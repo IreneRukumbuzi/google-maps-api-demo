@@ -72,10 +72,10 @@ const App = () => {
         </div>
         <div className="bottom-section">
           <div className="bottom-text">
-            {startingPointName && endingPointName && <div>{startingPointName} - {endingPointName}</div>}
-            {nextStopName && <div>Next Stop: {nextStopName}</div>}
+            {startingPointName && endingPointName && <div className="bold">{startingPointName} - {endingPointName}</div>}
+            {nextStopName && <div className="not-bold">Next Stop: {nextStopName}</div>}
             {directionsResponse && 
-              <div>
+              <div className="not-bold">
                 Distance: {(directionsResponse.routes[0]?.legs.reduce((total, leg) => total + leg.distance.value, 0) / 1000).toFixed(2)} km  
                 Time: {Math.round(directionsResponse.routes[0]?.legs.reduce((total, leg) => total + leg.duration.value, 0) / 60)} minutes
               </div>
